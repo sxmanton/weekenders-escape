@@ -4,24 +4,22 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-public class TV extends Activity {
+public class TakePeek extends Activity {
 
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_tv);
+		setContentView(R.layout.activity_take_peek);
 		// Show the Up button in the action bar.
 		setupActionBar();
-
+		
 		ActionBar actionBar = getActionBar();
         actionBar.hide();
 
@@ -40,7 +38,7 @@ public class TV extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tv, menu);
+		getMenuInflater().inflate(R.menu.take_peek, menu);
 		return true;
 	}
 
@@ -60,10 +58,5 @@ public class TV extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	public void CheckWindow(View view)
-    {
-    	Intent intent = new Intent(this, CheckWindow.class);
-    	startActivity(intent);
-    
-    }
+
 }

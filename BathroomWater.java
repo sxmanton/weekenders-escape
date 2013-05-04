@@ -1,13 +1,18 @@
 package com.example.zombieruns;
 
-import android.os.Bundle;
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
-import android.annotation.TargetApi;
-import android.os.Build;
+import android.view.View;
 
+@SuppressLint("NewApi")
 public class BathroomWater extends Activity {
 
 	@Override
@@ -16,6 +21,10 @@ public class BathroomWater extends Activity {
 		setContentView(R.layout.activity_bathroom_water);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+		ActionBar actionBar = getActionBar();
+        actionBar.hide();
+
 	}
 
 	/**
@@ -51,5 +60,23 @@ public class BathroomWater extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	public void WaterImportant(View view)
+    {
+    	Intent intent = new Intent(this, DeadScene.class);
+    	startActivity(intent);
+    
+    }
+	public void BackRoom(View view)
+    {
+    	Intent intent = new Intent(this, BackInRoom.class);
+    	startActivity(intent);
+    
+    }
+	public void CloserLook(View view)
+    {
+    	Intent intent = new Intent(this, DeadScene.class);
+    	startActivity(intent);
+    
+    }
 
 }

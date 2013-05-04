@@ -1,16 +1,20 @@
 package com.example.zombieruns;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Phone extends Activity {
 
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -57,5 +61,11 @@ public class Phone extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	public void CheckWindow(View view)
+    {
+    	Intent intent = new Intent(this, CheckWindow.class);
+    	startActivity(intent);
+    
+    }
 
 }
